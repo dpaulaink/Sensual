@@ -1,0 +1,26 @@
+voz_hannah_api/
+├── main.py
+├── requirements.txt
+├── Voz_Hannah.mp3
+├── Procfile
+└── README.
+mdfrom fastapi import FastAPI
+from fastapi.responses import FileResponse
+import os
+
+app = FastAPI()
+
+@app.get("/")
+def home():
+    return {"mensagem": "API da Voz Hannah no ar!"}
+
+@app.get("/voz")
+def get_voz():
+    caminho = os.path.join(os.getcwd(), "Voz_Hannah.mp3")
+    return FileResponse(path=caminho, media_type='audio/mpeg', filename="Voz_Hannah.mp3")
+fastapi
+uvicorn
+web: uvicorn main:app --host=0.0.0.0 --port=10000
+# Voz Hannah API
+
+API em FastAPI para servir um áudio sensual da Hannah.
