@@ -24,3 +24,5 @@ web: uvicorn main:app --host=0.0.0.0 --port=10000
 # Voz Hannah API
 
 API em FastAPI para servir um áudio sensual da Hannah.
+fastapi
+uvicorn
